@@ -1,0 +1,85 @@
+	<!DOCTYPE html>
+<html>
+<head>
+<title>Mudassar AI</title>
+<meta charset="UTF-8">
+</head>
+<body style="background-color:lightyellow; text-align:center; font-family:Arial Black;">
+<h1>Mudassar AI</h1>
+<input type="text" id="userInput" placeholder="Type it....">
+<button onclick="reply()">Send</button>
+<h3 id="result"></h3>
+<script>
+let qa = [
+{
+question: "What is English?",
+answer: "English is an international language."
+},
+{
+question: "What is Sindhi?",
+answer: "Sindhi is a language spoken mainly in Sindh."
+},
+{
+question: "What is Math?",
+answer: "Math is the study of numbers and calculations."
+},
+{
+question: "What is Pakistan?",
+answer: "Pakistan is a country in South Asia."
+},
+{
+question: "Acha ya bato ki mare papa ka name kiya ha?",
+answer: "Wo tumain pata hoga na mujhe nahain pata ki tumare papa ka name kiya ha ."
+},
+{
+question: "Who are you?",
+answer: "I am Mudassar AI chatbot."
+},
+{
+question: "What is Science?",
+answer: "A K,nowledge which we gain from observation is called a science."
+},
+{
+question: "Apko kisna banaya ha?",
+answer: "Mujhe Mudassar Ali Junejo sahab na banaya ha."
+},
+{
+question: "Aslam alickum?",
+answer: "Walickum aslam ."
+},
+{
+question: "Hello?",
+answer: "Hello! Welcome to Mudassar AI."
+},
+{
+question: "What is CPU?",
+answer: "CPU is the brain of computer."
+},
+{
+question: "What is the capital of pakistan?",
+answer: "Islamabad."
+},
+{
+question: "Which distance of earth and moon?",
+answer: "384,400.km (238,855 miles ."
+},
+{
+question: "What is capital of india?",
+answer: " Delhi ."
+}
+];
+function reply() {
+let input = document.getElementById("userInput").value.trim();
+for (let i = 0; i < qa.length; i++) {
+if (input.toLowerCase() === qa[i].question.toLowerCase()) {
+document.getElementById("result").innerHTML =
+qa[i].answer;
+return;
+}
+}
+document.getElementById("result").innerHTML =
+"Sorry, mujhe is sawal ka jawab nahi mila.";
+}
+</script>
+</body>
+</html>
